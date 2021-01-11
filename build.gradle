@@ -1,0 +1,50 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext.kotlin_version = "1.4.21"
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.1.1"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    //App dependencies
+    androidXAnnotations = '1.0.1'
+    coroutinesVersion = '1.2.1'
+    materialVersion = '1.0.0'
+    archVersion = "2.1.0"
+    archLifecycleVersion = '2.2.0-alpha01'
+    tedPermissionVersion = '2.2.2'
+    retrofitVersion = '2.6.0'
+    glideVersion = '4.9.0'
+    roomVersion = '2.3.0-alpha03'
+    koinVersion = '2.1.0'
+    fragmentVersion = '1.1.0'
+
+    rxjavaVersion = '3.0.7'
+    rxandroidVersion = '3.0.0'
+
+    mockVersion = '2.28.2'
+    androidXTestVersion = '1.1.0'
+    androidCoreTestVersion = '2.1.0'
+
+    hiltVersion = '2.28-alpha'
+}
